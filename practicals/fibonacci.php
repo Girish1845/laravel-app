@@ -4,7 +4,7 @@ $a = 0;
 $b = 1;
 
 echo "Fibonacci sequence of $n numbers:\n";
-
+// logic
 for ($i = 0; $i < $n; $i++) {
     echo "$a, ";
 
