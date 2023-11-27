@@ -1,13 +1,16 @@
 <?php
+namespace Tests\Feature;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
+use Practicals\Song;
 
-namespace Tests\Unit;
-
-use PHPUnit\Framework\TestCase;
-require(__DIR__.'/../../practicals/Song.php');
-use songs\Song;
-
-class SongTest extends TestCase
+class SongsTest extends TestCase
 {
+    /**
+     * A basic feature test songs.
+     */
+   
     public function testSetTempo(): void
     {
         $song = new Song("Title", "Artist", "Genre", 120);
@@ -34,8 +37,4 @@ class SongTest extends TestCase
         $this->expectException(\InvalidArgumentException::class);
         $song->setTempo(60.5);
     }
-
-
-
-    // Add other test methods for your different cases
 }
