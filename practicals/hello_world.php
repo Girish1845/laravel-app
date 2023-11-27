@@ -1,3 +1,3 @@
 <?php
-echo "Hello, World!";
+echo "Hello, World!";// prints hello world oono terminal
 ?>
