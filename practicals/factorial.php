@@ -6,5 +6,5 @@ for ($i = 1; $i <= $n; $i++) {
     $factorial *= $i;
 }
 
-echo "Factorial of $n is: $factorial\n";
+echo "Factorial of $n is: $factorial\n";//prints result
 ?>
