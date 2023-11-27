@@ -1,6 +1,7 @@
 <?php
 
 namespace songs;
+namespace Practicals;
 
 // Declaraction of class
 class Song {
