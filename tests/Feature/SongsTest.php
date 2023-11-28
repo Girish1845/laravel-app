@@ -7,10 +7,12 @@ use Practicals\Song;
 
 class SongsTest extends TestCase
 {
-    /**
-     * A basic feature test songs.
-     */
-   
+    public function testSongsOk(): void
+    {
+        $response = $this->get('/songs');
+        $response->assertStatus(200);
+    }
+
     public function testSetTempo(): void
     {
         $song = new Song("Title", "Artist", "Genre", 120);
@@ -37,4 +39,11 @@ class SongsTest extends TestCase
         $this->expectException(\InvalidArgumentException::class);
         $song->setTempo(60.5);
     }
+
+    public function testSongsOk(): void
+    {
+        $response = $this->get('/songs');
+        $response->assertStatus(200);
+    }
+
 }

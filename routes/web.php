@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Song;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,6 +36,9 @@ Route::get('/hello', function () {
 // On route '/veggies,' a chart should be seen, with the name and price of veggies
 Route::get('/veggies', function () {
     return view('table');
+});
+Route::get('/songs', function () {
+    return view('songs', [ 'songs' => Song::all() ] );
 });
 
 // Static songs route
