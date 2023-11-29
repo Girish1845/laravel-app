@@ -42,13 +42,13 @@ class Practical {
 }
 
 // Example usage:
-Practical::printHello();
-echo "\n";
+//Practical::printHello();
+//echo "\n";
 
-$sum = Practical::add(5, 7);
-echo "Sum: $sum\n";
+//$sum = Practical::add(5, 7);
+//echo "Sum: $sum\n";
 
-$fibonacciSequence = Practical::generateFibonacciSequence(10);
-echo "Fibonacci Sequence: " . implode(", ", $fibonacciSequence);
+//$fibonacciSequence = Practical::generateFibonacciSequence(10);
+//echo "Fibonacci Sequence: " . implode(", ", $fibonacciSequence);
 
 ?>

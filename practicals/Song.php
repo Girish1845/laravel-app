@@ -44,10 +44,11 @@ class Song {
         return $this->tempo;
     }
     public function setTempo($tempo) {
-        if (!is_numeric($tempo) || is_float($tempo)) {
-            throw new \InvalidArgumentException("inputs must be numeric.");
+        if (!is_numeric($tempo) || floatval($tempo) != intval($tempo)) {
+            throw new \InvalidArgumentException("Tempo must be a valid integer.");
         }
-        $this->tempo = $tempo;
+        $this->tempo = (int)$tempo;
     }
+    
 }
 ?>

@@ -4,15 +4,8 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use Practicals\Song;
-
 class SongsTest extends TestCase
 {
-    public function testSongsOk(): void
-    {
-        $response = $this->get('/songs');
-        $response->assertStatus(200);
-    }
-
     public function testSetTempo(): void
     {
         $song = new Song("Title", "Artist", "Genre", 120);
@@ -39,11 +32,17 @@ class SongsTest extends TestCase
         $this->expectException(\InvalidArgumentException::class);
         $song->setTempo(60.5);
     }
-
     public function testSongsOk(): void
     {
         $response = $this->get('/songs');
         $response->assertStatus(200);
     }
+
+    public function testSongs_staticOk(): void
+    {
+        $response = $this->get('/songs_static');
+    $response->assertStatus(200);
+    }
+
 
 }
